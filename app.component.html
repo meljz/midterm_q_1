@@ -1,1 +1,27 @@
+<div class="container">
+
+<h2>Date Pipes</h2>
+<p>Short Date: {{ currentDate | date: 'M/d/yy' }}</p>
+<p>Full Date: {{ currentDate | 'fullDate' }}</p>
+<p>Custom Date: {{ currentDate | date: 'MM/dd/yyyy' }}</p>
+<p>Short Time Format: {{ currentDate | date:'h:mm a' }}</p>
+<p>Day of the Year: {{ getDayOfYear(currentDate) }}</p>
+<p>Week of the Year: {{ getWeekOfYear(currentDate) }}</p>
+
+<h2>Currency Pipes</h2>
+<p>Default Currency: {{ price | currency }}</p>
+<p>USD Standard: {{ 42.42 | currencry:'USD':'symbol' }}</p>
+<p>USD With Currency Code: {{ 42.42 | currency:'USD':'code' }}</p>
+<p>INR Format: {{ 242.42 | currency:'INR':'symbol' }}</p>
+<p>GBP Format: {{ 42.42 | currency:'GBP':'symbol' }}</p>
+
+<h2>Asynch Pipes</h2>
+<p>Array Stream: {{ arrayStream$ | async }}</p>
+<p>Transform Object: {{ objectStream$ | async }}</p>
+
+
+<h2>JSON Pipes</h2>
+
+<h2>Slice Pipes</h2>
+</div>
 <router-outlet></router-outlet>/>
